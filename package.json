@@ -1,0 +1,19 @@
+{
+  "name": "rjct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ariieh/rjct-server.git"
+  },
+  "author": "Arieh Smith <arieh.smith@gmail.com>",
+  "license": "Copyright (C) Arieh Smith - All Rights Reserved",
+  "bugs": {
+    "url": "https://github.com/ariieh/rjct-server/issues"
+  },
+  "homepage": "https://github.com/ariieh/rjct-server"
+}
