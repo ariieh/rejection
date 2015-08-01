@@ -1,4 +1,15 @@
 var Rejection = require('../models/rejection');
+var Rejections = require('../collections/rejections');
+
+exports.index = function(req, res, next) {
+  var startIndex = req.query.startIndex;
+  var endIndex = req.query.endIndex;
+  var rjcts = new Rejections;
+
+  rjcts.paginated(startIndex, endIndex, function(models) {
+    res.json(models);
+  });
+};
 
 exports.create = function(req, res, next) {
   var data = {
@@ -9,4 +20,4 @@ exports.create = function(req, res, next) {
   new Rejection(data).save().then(function(model) {
     res.json(model);
   });
-}
+};
