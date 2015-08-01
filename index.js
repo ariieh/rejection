@@ -13,9 +13,8 @@ if ('development' == app.get('env')) app.use(errorHandler());
 
 // Routes
 app.use(express.static(__dirname + '/public'));
-//var routes = require('./routes');
-//app.get('/', routes.views.home);
-//app.post('/users', routes.users.create);
+var routes = require('./routes');
+app.post('/rjcts', routes.rjcts.create);
 
 // Start server
 app.listen(app.get('port'), function() {
