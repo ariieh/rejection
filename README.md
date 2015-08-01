@@ -3,7 +3,7 @@ Rejection game.
 
 # API
 ### get
-* `/rjcts`: get feed of all rejections
+* `/rjcts`: get feed of all rejections. range submitted as URL params, e.g. `rjcts?startIndex=0&endIndex=1`. inclusive -- this would get you two rejections, sorted by default in order of recency, newest on top.
 ````
 { 'rejections':
   [
