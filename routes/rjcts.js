@@ -1,4 +1,5 @@
-var Rejection = require('../models/rejection');
+var models = require('../models');
+var Rejection = models.Rejection;
 var Rejections = require('../collections/rejections');
 
 exports.index = function(req, res, next) {
