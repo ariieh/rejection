@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 if ('development' == app.get('env')) app.use(errorHandler());
 
 // Routes
-app.use(express.static(__dirname + '/public'));
 var routes = require('./routes');
 app.get('/rjcts', routes.rjcts.index);
 app.post('/rjcts', routes.rjcts.create);
