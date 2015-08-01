@@ -1,3 +1,3 @@
-exports.User = require('./user');
-exports.Rejection = require('./rejection');
+exports.Rejection = require('./rejection').Rejection;
+exports.User = require('./user').User;
 

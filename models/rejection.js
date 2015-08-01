@@ -1,10 +1,11 @@
 var bookshelf = require('../bookshelf');
-var models = require('./');
+var User = require('./user');
 
-var Rejection = module.exports = bookshelf.Model.extend({
+var Rejection = exports.Rejection = bookshelf.Model.extend({
   tableName: 'rejections',
   user: function() {
-    return this.belongsTo(models.User);
+    return this.belongsTo(User);
   },
   hasTimestamps: ['created_at', 'updated_at']
 });
+
