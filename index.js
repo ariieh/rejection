@@ -3,6 +3,10 @@ var app = module.exports = express();
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var errorHandler = require('errorhandler');
+var env = require('node-env-file');
+
+// Load local environment variables
+env(__dirname + '/.env');
 
 // Express config
 app.set('port', process.env.PORT || 3000);
