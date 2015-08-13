@@ -4,6 +4,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var errorHandler = require('errorhandler');
 var env = require('node-env-file');
+var session = require('express-session');
 
 // Load local environment variables
 env(__dirname + '/.env');
