@@ -6,6 +6,18 @@ Rejection game.
 
 # API
 ### get
+* `/idea`: gets you an idea if you're logged in
+````
+{ 'idea':
+  {
+    'id': 1,
+    'title': "Ask a girl out",
+    'level': 7
+  }
+}
+````
+
+### get
 * `/rjcts`: get feed of all rejections. range submitted as URL params, e.g. `rjcts?startIndex=0&endIndex=1`. inclusive -- this would get you two rejections, sorted by default in order of recency, newest on top. 
 ````
 { 'rejections':
@@ -50,7 +62,8 @@ Rejection game.
 ````
 { 'rejection':
   'title': "asked some dude for $5",
-  'body': "this was the really cool thing i did"
+  'body': "this was the really cool thing i did",
+  'idea_id': 1
 }
 ````
 * `/rjcts/1/comments`: add comment to rejection
